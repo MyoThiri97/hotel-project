@@ -1,0 +1,8 @@
+<h1><%= @hotel.name %>レビューの一覧</h1>
+	<% @reviews.each do |review| %>
+	<p>
+	<%= review.rating %>
+	<%= review.name %>
+	<%= review.body %>
+	<% end %>
+	<p><%= link_to 'レビューの一覧', hotel_reviews_path(@hotel) %></p>

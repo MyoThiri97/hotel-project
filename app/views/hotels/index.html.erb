@@ -1,0 +1,29 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<%= search_form_for @q do |hotel| %>
+			  <%= hotel.label :name_cont %>
+			  <%= hotel.search_field :name_cont %>
+			  <%= hotel.submit %>
+			<% end %>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<% @hotels.each do |hotel| %>
+		<div class="col-md-4">
+			<div class="card" style="width: 18rem;">
+			  <%= image_tag hotel.picture.url, class: "card-img-top" %>
+				<div class="card-body">
+				    <h5 class="card-title"><%= hotel.name %></h5>
+				    <p class="card-text"><%= hotel.adress %><br>
+				    <%= hotel.description %>
+				    </p>
+				    <a href=<%= hotel_path(hotel) %> class="btn btn-primary">ホテルの詳細</a>
+				</div>
+			</div>			
+		</div>
+	    <% end %>
+	</div>
+</div>

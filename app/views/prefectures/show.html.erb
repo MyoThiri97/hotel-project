@@ -1,0 +1,9 @@
+<h1><%= @prefecture.name %></h1>
+	<% @hotels.each do |hotel| %>
+	<p>
+	<h2><%= hotel.name %></h2>
+	    <%= hotel.adress %>
+	 <p><%= image_tag(hotel.picture_url, width: '600') if hotel.picture.present? %></p>
+	    <%= hotel.description %>
+    </p>
+    <% end %>

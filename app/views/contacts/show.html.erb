@@ -1,0 +1,25 @@
+<h2>問い合わせ</h2>
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>E-mail Address:</strong>
+  <%= @contact.email %>
+</p>
+
+<p>
+  <strong>性別:</strong>
+ <% if @contact.sex == 0 %>
+  <span> 男 </span>
+ <% else %>
+  <span> 女 </span>
+ <%end%>
+
+</p>
+<p>
+  <strong>Body:</strong>
+  <%= @contact.body %>
+</p>
+		
